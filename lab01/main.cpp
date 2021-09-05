@@ -1,6 +1,18 @@
 #include <iostream>
+#include "matrix.hpp"
+
+using math::Matrix;
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    // read matrix
+    std::cout << "Enter n, and m: ";
+    int n, m;
+    std::cin >> n >> m;
+    auto matrix = new Matrix(n, m);
+    std::cin >> *matrix;
+
+    // print matrix out
+    std::cout << *matrix;
+
     return 0;
 }
