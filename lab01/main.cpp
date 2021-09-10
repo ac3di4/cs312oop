@@ -23,7 +23,7 @@ int main() {
     std::cout << matrix;
     // print vector
     std::cout << "Vector:" << std::endl;
-    for (auto e : vec)
+    for (auto e: vec)
         std::cout << e << " ";
     std::cout << std::endl;
 }

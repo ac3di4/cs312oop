@@ -20,7 +20,7 @@ namespace math {
         return s;
     }
 
-    std::ostream & operator <<(std::ostream &s, const Matrix &matrix) {
+    std::ostream &operator<<(std::ostream &s, const Matrix &matrix) {
         s << "Size: " << matrix.n << "x" << matrix.m << std::endl << "Matrix: " << std::endl;
         for (auto i = 0; i < matrix.m; ++i) {
             for (auto j = 0; j < matrix.n; ++j)
@@ -30,7 +30,7 @@ namespace math {
         return s;
     }
 
-    std::istream & operator >>(std::istream &s, Matrix &matrix) {
+    std::istream &operator>>(std::istream &s, Matrix &matrix) {
         for (auto i = 0; i < matrix.m; ++i)
             for (auto j = 0; j < matrix.n; ++j) {
                 int n;
