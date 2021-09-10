@@ -1,22 +1,26 @@
 #include "matrix.hpp"
 
 namespace math {
-    Matrix::Matrix(int n, int m) :n(n), m(m), data(n*m) {}
+    Matrix::Matrix(const size_t n, const size_t m) : n(n), m(m) {}
 
-    std::ostream & operator <<(std::ostream &s, const Matrix &m) {
-        s << "Size: " << m.n << "x" << m.m << std::endl;
-        s << "Matrix:\n";
-        for (int i = 0; i < m.m; ++i) {
-            for (int j = 0; j < m.n; ++j)
-                s << m.get(i, j) << " ";
+    std::ostream & operator <<(std::ostream &s, const Matrix &matrix) {
+        s << "Size: " << matrix.n << "x" << matrix.m << std::endl << "Matrix: " << std::endl;
+        for (auto i = 0; i < matrix.m; ++i) {
+            for (auto j = 0; j < matrix.n; ++j)
+                s << matrix.get(i, j) << " ";
             s << std::endl;
         }
         return s;
     }
 
-    std::istream & operator >> (std::istream & s, Matrix & m) {
-        for (int i = 0; i < m.n * m.m; ++i)
-            s >> m.data[i];
+    std::istream & operator >>(std::istream &s, Matrix &matrix) {
+        for (auto i = 0; i < matrix.m; ++i)
+            for (auto j = 0; j < matrix.n; ++j) {
+                int n;
+                s >> n;
+                if (n != 0)
+                    matrix.data[i][j] = n;
+            }
         return s;
-    };
+    }
 }

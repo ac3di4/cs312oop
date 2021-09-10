@@ -4,15 +4,14 @@
 using math::Matrix;
 
 int main() {
-    // read matrix
-    std::cout << "Enter n, and m: ";
-    int n, m;
+    std::cout << "[matrix size]: ";
+    size_t n, m;
     std::cin >> n >> m;
-    auto matrix = new Matrix(n, m);
-    std::cin >> *matrix;
 
-    // print matrix out
-    std::cout << *matrix;
+    Matrix matrix(n, m);
+    std::cin >> matrix;
 
-    return 0;
+    // TODO: solve
+
+    std::cout << matrix;
 }
