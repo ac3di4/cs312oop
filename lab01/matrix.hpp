@@ -24,6 +24,9 @@ namespace math {
             }
         }
 
+        int line_average(size_t) const;
+        int line_sum_above_average(size_t) const;
+
         friend std::ostream & operator <<(std::ostream &, const Matrix &);
         friend std::istream & operator >>(std::istream &, Matrix &);
     };
