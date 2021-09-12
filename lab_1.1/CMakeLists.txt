@@ -4,4 +4,4 @@ project(lab01)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_FLAGS "-Wall -Wextra")
 
-add_executable(lab main.cpp)
+add_executable(lab main.cpp Deltoid.hpp)
