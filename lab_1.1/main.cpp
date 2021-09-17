@@ -10,7 +10,7 @@ int main() {
     std::cout << "Deltoid bigger circle radius R=3r=";
     double r;
     std::cin >> r;
-    if (!std::cin.good())
+    if (!std::cin.good() && r < 0)
         return -1;
 
     Deltoid d(r);
