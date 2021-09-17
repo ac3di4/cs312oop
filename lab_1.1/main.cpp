@@ -10,7 +10,7 @@ int main() {
     std::cout << "Deltoid bigger circle radius R=3r=";
     double r;
     std::cin >> r;
-    if (!std::cin.good() && r < 0)
+    if (!std::cin.good() || r < 0)
         return -1;
 
     Deltoid d(r);
@@ -28,7 +28,7 @@ int main() {
 
     auto pos = d.xy(t);
     std::cout << "Deltoid curve coordinates for t=" << t
-              << "(" << pos.first << ", " << pos.second << ")" << std::endl;
+              << ": (" << pos.first << ", " << pos.second << ")" << std::endl;
 
     return 0;
 }
