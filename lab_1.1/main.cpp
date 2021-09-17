@@ -5,11 +5,6 @@
 
 using curves::Deltoid;
 
-/// Example usage:
-/// in: 3
-/// out: 4 16 ~6
-/// in: 0
-/// out: (3, 0)
 int main() {
     // dialog program
     std::cout << "Deltoid bigger circle radius R=3r=";
